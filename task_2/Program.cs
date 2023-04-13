@@ -1,18 +1,18 @@
-﻿//Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
+﻿Console.Write("Введите первое число: ");
+int firstNum = Convert.ToInt32(Console.ReadLine());
 
-int i = 0;
-int max = 0;
-int[] array = new int [3];
-while (i < 3)
+Console.Write("Введите второе число: ");
+int secondNum = Convert.ToInt32(Console.ReadLine());
+
+if (firstNum > secondNum)
 {
-    Console.WriteLine("Введите число " + (i + 1) + ": ");
-    array[i] = Convert.ToInt32(Console.ReadLine());
-    
-    if (array[i] > max)
-    {
-        max = array[i];
-    }
-
-    i++;
+    Console.WriteLine("Число " + firstNum + " больше числа " + secondNum);
 }
-Console.Write("Максимальное введенное число: " + max);
+else if (firstNum < secondNum)
+{
+    Console.WriteLine("Число " + secondNum + " больше числа " + firstNum);
+}
+else
+{
+    Console.WriteLine("Числа равны");
+}

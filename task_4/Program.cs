@@ -1,15 +1,18 @@
-﻿// Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+﻿//Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
 
-Console.Write("Введите число N: ");
-int num = Convert.ToInt32(Console.ReadLine());
-
-int i = 1;
-
-while (i <= num)
+int i = 0;
+int max = 0;
+int[] array = new int [3];
+while (i < 3)
 {
-    if (i % 2 == 0)
+    Console.WriteLine("Введите число " + (i + 1) + ": ");
+    array[i] = Convert.ToInt32(Console.ReadLine());
+    
+    if (array[i] > max)
     {
-        Console.Write(i + " ");
+        max = array[i];
     }
+
     i++;
 }
+Console.Write("Максимальное введенное число: " + max);
