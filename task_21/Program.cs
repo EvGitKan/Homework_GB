@@ -9,7 +9,7 @@ int secondPointX = InputNumber("Введите координату X второ
 int secondPointY = InputNumber("Введите координату Y второй точки: ");
 int secondPointZ = InputNumber("Введите координату Z второй точки: ");
 
-double distance = DistanceBetweenPoints(firstPointX, firstPointY, firstPointZ, secondPointX, secondPointY, secondPointZ);
+double distance = Math.Round(DistanceBetweenPoints(firstPointX, firstPointY, firstPointZ, secondPointX, secondPointY, secondPointZ), 1);
 Console.Write($"Расстояние между двумя точками в 3D пространстве = {distance}");
 
 int InputNumber(string message)
@@ -24,6 +24,6 @@ double DistanceBetweenPoints(int numX1, int numY1, int numZ1, int numX2, int num
     int deltaX = numX2 - numX1;
     int deltaY = numY2 - numY1;
     int deltaZ = numZ2 - numZ1;
-    double dist = Math.Round(Math.Sqrt(deltaX ^ 2 + deltaY ^ 2 + deltaZ ^ 2), 1);
+    double dist = Math.Sqrt(Math.Pow(deltaX, 2) + Math.Pow(deltaY, 2) + Math.Pow(deltaZ, 2));
     return dist;
 }
