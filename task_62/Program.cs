@@ -32,14 +32,18 @@ int[,] GenerateMatrixIntNum(int rows, int columns)
 //Вывод массива в консоль.
 void PrintMatrixIntNum(int[,] newMatrix)
 {
-    for (int i = 0; i < newMatrix.GetLength(0); i++)
+for (int i = 0; i < newMatrix.GetLength(0); i++)
     {
-        Console.Write("|");
         for (int j = 0; j < newMatrix.GetLength(1); j++)
         {
-            Console.Write($"{newMatrix[i, j],2} ");
+            if (newMatrix[i, j] < 10)
+            {
+                Console.Write("0" + newMatrix[i, j]);
+                Console.Write(" ");
+            }
+            else Console.Write(newMatrix[i, j] + " ");
         }
-        Console.WriteLine("|");
+        Console.WriteLine();
     }
 }
 
