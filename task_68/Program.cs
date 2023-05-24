@@ -15,10 +15,19 @@ int FunctionAkkerman(int numM, int numN)
     else return FunctionAkkerman(numM - 1, FunctionAkkerman(numM, numN - 1));
 }
 
+bool CheckPositiveNumbers(int numM, int numN)
+{
+    return numM >= 0 && numN >= 0;
+}
+
 Console.WriteLine("Введите целое положительное число M");
 int numberM = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите целое положительное число N");
 int numberN = Convert.ToInt32(Console.ReadLine());
 
+if (CheckPositiveNumbers(numberM, numberN))
+{
 int result = FunctionAkkerman(numberM, numberN);
 Console.WriteLine(result);
+}
+else Console.WriteLine("Функция Аккермана не может быть рассчитана, т.к. одно из чисел отрицательное.");
