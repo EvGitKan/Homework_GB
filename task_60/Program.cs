@@ -41,7 +41,6 @@ bool CheckReplayElement(int[,,] newArray, int element)
                 if (element == newArray[i, j, k])
                 {
                     return true;
-                    break;
                 }
             }
         }

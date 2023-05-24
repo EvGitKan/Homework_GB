@@ -39,7 +39,7 @@ void PrintMatrixIntNum(int[,] newMatrix)
 int[,] ProductOfMatrices(int[,] oneMatrix, int[,] twoMatrix)
 {
     int[,] matrix = new int[oneMatrix.GetLength(0), twoMatrix.GetLength(1)];
-    int element = 0;
+
     int result = 0;
     for (int k = 0; k < matrix.GetLength(0); k++)
     {
